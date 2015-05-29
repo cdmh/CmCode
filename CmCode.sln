@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CmLib", "CmLib\CmLib.vcxproj", "{925E8D9D-F4BB-431C-BE63-5F95F6CCC460}"
 EndProject
@@ -25,6 +25,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibLinear", "LibLinear\LibLinear.vcxproj", "{86266F16-8B7E-4666-A12F-96E351579ADA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Objectness", "Objectness\Objectness.vcxproj", "{7FD1BF61-2F9E-4ADC-A4F4-6A26C5702E74}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PtToBBox", "PtToBBox\PtToBBox.vcxproj", "{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,14 @@ Global
 		{7FD1BF61-2F9E-4ADC-A4F4-6A26C5702E74}.Release|Win32.ActiveCfg = Release|x64
 		{7FD1BF61-2F9E-4ADC-A4F4-6A26C5702E74}.Release|x64.ActiveCfg = Release|x64
 		{7FD1BF61-2F9E-4ADC-A4F4-6A26C5702E74}.Release|x64.Build.0 = Release|x64
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Debug|Win32.Build.0 = Debug|Win32
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Debug|x64.ActiveCfg = Debug|x64
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Debug|x64.Build.0 = Debug|x64
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Release|Win32.ActiveCfg = Release|Win32
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Release|Win32.Build.0 = Release|Win32
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Release|x64.ActiveCfg = Release|x64
+		{69D2CD5E-81B4-4D4B-9C25-989155EBF6F0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
