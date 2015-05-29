@@ -127,7 +127,10 @@ using namespace cv;
 extern bool dbgStop;
 #define DBG_POINT if (dbgStop) printf("%d:%s\n", __LINE__, __FILE__);
 
+#ifndef NO_CMLIB_AUTOLINK
 #pragma comment(lib, lnkLIB("CmLib"))
+#endif
+
 #define CM_CODE
 
 

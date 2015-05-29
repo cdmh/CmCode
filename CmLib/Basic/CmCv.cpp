@@ -68,7 +68,7 @@ void CmCv::FFTShift(Mat& img)
 /************************************************************************/
 /* Swap the content of two Mat with same type and size                  */
 /************************************************************************/
-void CmCv::Swap(Mat& a, Mat& b)
+void CmCv::Swap(cv::Mat a, cv::Mat b)
 {
 	CV_Assert(a.type() == b.type() && a.size() == b.size());
 	Mat t;
@@ -341,7 +341,8 @@ Mat CmCv::GetBorderRegC(CMat &img3u, Mat &idx1i, vecI &idxCount)
 
 	erode(edg, edg, Mat(), Point(-1, -1), 2);
 	Mat_<int> idx1iT;
-	int regNum = CmCv::GetRegions(edg, idx1iT, idxCount, vecB(), true);
+    vecB idxLabel;
+	int regNum = CmCv::GetRegions(edg, idx1iT, idxCount, idxLabel, true);
 	while(regNum > 1 && idxCount[regNum - 1] < 300)
 		regNum--;
 	Mat bdCMask = CmCv::GetBorderReg(idx1iT, regNum), ignoreMask;
@@ -465,7 +466,7 @@ void CmCv::NormalizeImg(CStr &inDir, CStr &outDir, int minLen, bool subFolders)
 }
 
 
-void CmCv::Demo(const char* fileName/* = "H:\\Resize\\cd3.avi"*/)
+void CmCv::Demo(const char* /*fileName*/ /* = "H:\\Resize\\cd3.avi"*/)
 {
 
 }
@@ -550,10 +551,12 @@ void CmCv::CannySimpleRGB(CMat &img3u, Mat &edge1u, double thresh1, double thres
 }
 
 
-void CmCv::rubustifyBorderMask(Mat& mask1u)
+void CmCv::rubustifyBorderMask(cv::Mat mask1u)
 {
 	Mat_<int> regIdx1i;
-	int regNum = CmCv::GetRegions(mask1u, regIdx1i, vecI(), vecB(), true);
+    vecI idxCount;
+    vecB idxLabel;
+	int regNum = CmCv::GetRegions(mask1u, regIdx1i, idxCount, idxLabel, true);
 	mask1u = CmCv::GetBorderReg(regIdx1i, regNum, 0.02, 0.5);
 }
 

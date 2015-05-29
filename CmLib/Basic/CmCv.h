@@ -23,7 +23,7 @@ struct CmCv {
 	static void FFTShift(Mat& img);
 
 	// Swap the content of two Mat with same type and size
-	static inline void Swap(Mat& a, Mat& b);
+	static inline void Swap(cv::Mat a, cv::Mat b);
 
 	// Normalize size/image to min(width, height) = shortLen and use width 
 	// and height to be multiples of unitLen while keeping its aspect ratio 
@@ -89,7 +89,7 @@ struct CmCv {
 
 	static void CannySimpleRGB(CMat &img3u, Mat &edge1u, double thresh1, double thresh2, int apertureSize, bool L2gradient = false);
 	static Mat getGrabMask(CMat &img3u, Rect rect);//, CStr sameNameNE, int ext = 4
-	static void rubustifyBorderMask(Mat& mask1u); 
+	static void rubustifyBorderMask(cv::Mat mask1u); 
 
 	static int intMatMax(CMat idx1i); // return the max value in an int matrix
 };

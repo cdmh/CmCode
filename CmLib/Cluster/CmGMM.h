@@ -258,7 +258,6 @@ template <int D> void CmGMM_<D>::BuildGMMs(CMat& sampleDf, Mat& component1i, CMa
 	// Initial first clusters
 	CmGaussianFitter<D>* fitters = new CmGaussianFitter<D>[_K];
 	for (int y = 0; y < rows; y++)	{
-		int* components = component1i.ptr<int>(y);
 		const float* img = sampleDf.ptr<float>(y);
 		const float* w = weighted ? w1f.ptr<float>(y) : NULL;
 		if (weighted){

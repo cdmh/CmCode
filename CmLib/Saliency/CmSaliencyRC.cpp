@@ -1,5 +1,5 @@
 #include "StdAfx.h"
-#include "CmSaliencyRC.h"
+//#include "CmSaliencyRC.h"
 
 const char* CmSaliencyRC::SAL_TYPE_DES[SAL_TYPE_NUM] = {
 	"RC", "HC", "FT", "LC", "SR"
@@ -522,7 +522,6 @@ int CmSaliencyRC::Quantize(CMat& img3f, Mat &idx1i, Mat &_color3f, Mat &_colorNu
 	// Find significant colors
 	int maxNum = 0;
 	{
-		int count = 0;
 		vector<pair<int, int>> num; // (num, color) pairs in num
 		num.reserve(pallet.size());
 		for (map<int, int>::iterator it = pallet.begin(); it != pallet.end(); it++)

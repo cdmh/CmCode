@@ -375,7 +375,7 @@ bool CmFile::matRead(FILE *f, Mat& M)
 	if (f == NULL)
 		return false;
 	char buf[8];
-	int pre = (int)fread(buf,sizeof(char), 5, f);
+	fread(buf,sizeof(char), 5, f);
 	if (strncmp(buf, "CmMat", 5) != 0)	{
 		printf("Invalidate CvMat data file: %d:%s\n", __LINE__, __FILE__);
 		return false;
